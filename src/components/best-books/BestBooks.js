@@ -11,7 +11,7 @@ class BestBooks extends React.Component {
     getBooks = async () => {
         try {
             let results = await axios.get(`${process.env.REACT_APP_SERVER}/books`);
-            // console.log('results from api', results);
+            console.log('results from api', results);
             this.setState({
                 books: results.data
             })
@@ -22,7 +22,7 @@ class BestBooks extends React.Component {
 
 
     componentDidMount() {
-        this.getCats();
+        this.getBooks();
     }
 
 
