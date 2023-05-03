@@ -15,7 +15,7 @@ class BestBooks extends Component {
             let results = await axios.get(`${process.env.REACT_APP_SERVER}/books`);
             console.log('results from api', results);
             this.setState({
-                books: results.data,
+                books: results.data
             });
         } catch (error) {
             console.log('we have an error: ', error.response.data);
