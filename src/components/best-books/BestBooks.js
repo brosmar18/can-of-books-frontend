@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { Container } from 'react-bootstrap';
 import axios from 'axios';
-import { Container, Carousel } from 'react-bootstrap';
+import Books from './Books';
 
 class BestBooks extends Component {
     constructor(props) {
@@ -22,30 +23,59 @@ class BestBooks extends Component {
         }
     };
 
+    handleBookSubmit = async (event) => {
+        event.preventDefault();
+        let newBook = {
+            title: event.target.title.value,
+            description: event.target.description.value,
+            status: event.target.status.checked,
+        }
+        console.log(newBook);
+        this.postBook(newBook);
+    };
+
+    postBook = async (newBookObject) => {
+        try {
+            let url = `${process.env.REACT_APP_SERVER}/books`;
+            let createdBook = await axios.post(url, newBookObject);
+
+            this.setState({
+                books: [...this.state.books, createdBook.data],
+            });
+        } catch (error) {
+            console.log('we have an error: ', error.response.data);
+        }
+    };
+
+    deleteBooks = async (id) => {
+        console.log('proof of life');
+        try {
+            let url = `${process.env.REACT_APP_SERVER}/books/${id}`;
+            await axios.delete(url);
+
+            let updatedBooks = this.state.books.filter(book => book._id !== id);
+            this.setState({
+                books: updatedBooks
+            });
+        } catch (error) {
+            console.log('we have an error: ', error.response.data);
+        }
+    };
+
     componentDidMount() {
         this.getBooks();
     }
 
     render() {
-        let allBooks = this.state.books.map((book, index) => {
-            return (
-                <Carousel.Item key={index}>
-                    <Carousel.Caption>
-                        <h3>Title: {book.title}</h3>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            );
-        });
         return (
-            <>
-                {this.state.books.length > 0 && (
-                    <>
-                        <Container>
-                            <Carousel>{allBooks}</Carousel>
-                        </Container>
-                    </>
-                )}
-            </>
+            <Container>
+                <h1 className="text-center mt-4 mb-4">Best Books</h1>
+                <Books
+                    books={this.state.books}
+                    deleteBooks={this.deleteBooks}
+                    handleBookSubmit={this.handleBookSubmit}
+                />
+            </Container>
         );
     }
 }
