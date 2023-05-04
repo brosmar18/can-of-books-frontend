@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import axios from 'axios';
 import Books from './Books';
+import '../main/main.css';
 
 class BestBooks extends Component {
     constructor(props) {
@@ -69,7 +70,6 @@ class BestBooks extends Component {
     render() {
         return (
             <Container>
-                <h1 className="text-center mt-4 mb-4">Best Books</h1>
                 <Books
                     books={this.state.books}
                     deleteBooks={this.deleteBooks}
