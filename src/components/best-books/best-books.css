@@ -1,0 +1,100 @@
+.best-books-container {
+    background-color: #2E3840;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.carousel {
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 50px;
+}
+
+.card-description {
+    font-size: 30px;
+}
+
+.carousel-item .btn-delete {
+    font-size: 20px;
+    padding: 4px 8px;
+}
+
+.carousel-item {
+    background-color: #4E6E81;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.carousel-caption {
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.carousel .btn {
+    background-color: #F9DBBB;
+    border-color: #F9DBBB;
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    color: #4E6E81;
+}
+
+.carousel .btn:hover {
+    background-color: #3C4D5A;
+    border-color: #3C4D5A;
+    color: #F9DBBB;
+}
+
+.mb-2 {
+    color: #E1E1E1;
+}
+
+
+.Form {
+    background-color: #2E3840;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.form__label {
+    color: #F9DBBB;
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.Form .form-control {
+    background-color: #4E6E81;
+    color: #F9DBBB;
+    border: 1px solid #F9DBBB;
+}
+
+.Form .form-control:focus {
+    background-color: #4E6E81;
+    border-color: #F9DBBB;
+    box-shadow: none;
+}
+
+.Form .form-check-label {
+    color: #F9DBBB;
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.Form .btn {
+    background-color: #F9DBBB;
+    border-color: #F9DBBB;
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    color: #4E6E81;
+}
+
+.Form .btn:hover {
+    background-color: #3C4D5A;
+    border-color: #3C4D5A;
+    color: #F9DBBB;
+}

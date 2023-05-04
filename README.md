@@ -52,3 +52,5 @@ What will your team do if one person is taking over the project and not letting 
 Communicate that and check in! Make sure everyone is up to date in the labs.
 How will you approach each other and the challenge of building an application knowing that it is impossible for two people to be at the exact same place in understanding and skill level?
 Communicate on where you’re at, like when finishing a feature, and just check throughout. Understanding that we all have our strengths and weaknesses and helping each other as well as taking that help from others that could teach us.
+
+Color pallette: #4E6E81, #F9DBBB, #FF0303, #2E3840

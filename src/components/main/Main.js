@@ -1,5 +1,7 @@
 import React from 'react';
 import BestBooks from '../best-books/BestBooks';
+import './main.css';
+import '../best-books/best-books.css';
 
 
 class Main extends React.Component {
