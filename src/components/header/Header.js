@@ -1,4 +1,5 @@
 import React from 'react';
+import './header.css';
 
 
 class Header extends React.Component {
@@ -6,7 +7,7 @@ class Header extends React.Component {
         return(
             <>
             <header className='header'>
-                <h2 className='header__title'>Hello World!</h2>
+                <h2 className='header__title'>Lots of Books</h2>
             </header>
             </>
         );
